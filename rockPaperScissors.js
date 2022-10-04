@@ -50,16 +50,12 @@ function determineWinner(userChoice, computerChoice) {
   }
 }
 
-function playGame() {
-  const userChoice = getUserChoice();
+const playGame = (theUserChoice) => {
+  const userChoice = getUserChoice(theUserChoice);
   const computerChoice = getComputerChoice();
   console.log(`You threw: ${userChoice}`);
   console.log(`The computer threw: ${computerChoice}`);
-}
+  console.log(determineWinner(userChoice, computerChoice));
+};
 
-
-console.log(determineWinner("paper", "scissors"));
-
-console.log(getComputerChoice());
-
-console.log(getUserChoice("ROCK"));
+playGame("rock");
