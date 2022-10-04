@@ -3,7 +3,8 @@ const getUserChoice = (userInput) => {
   if (
     userInput === "rock" ||
     userInput === "paper" ||
-    userInput === "scissors"
+    userInput === "scissors" ||
+    userInput === "bomb"
   ) {
     return userInput;
   } else {
@@ -24,6 +25,7 @@ function getComputerChoice() {
 }
 
 function determineWinner(userChoice, computerChoice) {
+  if (userChoice === 'bomb') return 'You Won!';
   if (userChoice === computerChoice) {
     return "the game is a tie!";
   }
